@@ -1,0 +1,176 @@
+﻿<Window x:Class="GazLink.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:local="clr-namespace:GazLink"
+        mc:Ignorable="d"
+        Title="GazLink" MinHeight="700" MinWidth="1150"
+        Width="1150" Height="700"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220px"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0"
+              Grid.ColumnSpan="2"
+              Background="#3B3B3B">
+            <StackPanel Orientation="Vertical" 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="40 0 0 0">
+                <Border Width="66.5px"
+                        Height="11.6px"
+                        Background="#FFCC57"
+                        HorizontalAlignment="Left"/>
+                <TextBlock Text="GazLink" 
+                           Foreground="#F7F7F7"
+                           FontFamily="{StaticResource MontserratBlack}"
+                           FontSize="37px"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Margin="0 0 20 0">
+                <Button Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Margin="0 0 20 0"
+                        Name="btnAccount" Click="btnAccount_Click">
+                    <fa:ImageAwesome Icon="User" Foreground="#FFCC57"/>
+                </Button>
+                <Button Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Name="btnLogOut" Click="btnLogOut_Click">
+                    <fa:ImageAwesome Icon="SignOut" Foreground="#FFCC57"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              Background="#FFCC57">
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top">
+                <Button Background="{x:Null}"
+                        FontFamily="{StaticResource MontserratMedium}"
+                        Foreground="#3B3B3B"
+                        Height="40"
+                        FontSize="16"
+                        HorizontalContentAlignment="Left"
+                        BorderBrush="{x:Null}"
+                        VerticalContentAlignment="Center"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        Margin="0 10"
+                        Name="AddApplication" Click="AddApplication_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="PlusSquareOutline" 
+                                         Foreground="#3B3B3B" 
+                                         Margin="0 0 10 0"
+                                         Width="20"/>
+                        <fa:FontAwesome Text="Создать заявку"
+                                        VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                
+                <Button Background="{x:Null}"
+                        FontFamily="{StaticResource MontserratMedium}"
+                        Foreground="#3B3B3B"
+                        Height="40"
+                        FontSize="16"
+                        HorizontalContentAlignment="Left"
+                        BorderBrush="{x:Null}"
+                        VerticalContentAlignment="Center"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        Margin="0 10"
+                        Name="btnApplicationsList" Click="btnApplicationsList_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Tasks" 
+                                         Foreground="#3B3B3B" 
+                                         Margin="0 0 10 0"
+                                         Width="20"/>
+                        <fa:FontAwesome Text="Заявки"
+                                        VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Background="{x:Null}"
+                        FontFamily="{StaticResource MontserratMedium}"
+                        Foreground="#3B3B3B"
+                        Height="40"
+                        FontSize="16"
+                        BorderBrush="{x:Null}"
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Left"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        Margin="0 10"
+                        Name="btnClientLsit" Click="btnClientLsit_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="AddressBook" 
+                                         Foreground="#3B3B3B" 
+                                         Margin="0 0 10 0"
+                                         Width="20"/>
+                        <fa:FontAwesome Text="Клиенты"
+                                        VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>   
+                
+                <Button Background="{x:Null}"
+                        FontFamily="{StaticResource MontserratMedium}"
+                        Foreground="#3B3B3B"
+                        Height="40"
+                        FontSize="16"
+                        BorderBrush="{x:Null}"
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Left"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        Margin="0 10"
+                        Name="btnProductList" Click="btnProductList_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Cog" 
+                                         Foreground="#3B3B3B" 
+                                         Margin="0 0 10 0"
+                                         Width="20"/>
+                        <fa:FontAwesome Text="Оборудование"
+                                        VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                
+                <Button Background="{x:Null}"
+                        FontFamily="{StaticResource MontserratMedium}"
+                        Foreground="#3B3B3B"
+                        Height="40"
+                        FontSize="16"
+                        BorderBrush="{x:Null}"
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Left"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        Margin="0 10"
+                        Name="btnWorkersList" Click="btnWorkersList_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="AddressCard" 
+                                         Foreground="#3B3B3B" 
+                                         Margin="0 0 10 0"
+                                         Width="22"/>
+                        <fa:FontAwesome Text="Сотрудникики"
+                                        VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1"
+              Grid.Column="1"
+              Background="#F7F7F7">
+                    <Frame Margin="10"
+                           NavigationUIVisibility="Hidden"
+                           x:Name="frameMain">
+
+                    </Frame>
+        </Grid>
+    </Grid>
+</Window>

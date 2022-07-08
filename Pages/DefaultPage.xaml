@@ -1,0 +1,25 @@
+﻿<Page x:Class="GazLink.Pages.DefaultPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GazLink.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="430" d:DesignWidth="640"
+      Title="DefaultPage">
+
+    <Grid Background="#3B3B3B">
+        <StackPanel Orientation="Vertical" 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+            <Border Width="102.75px"
+                        Height="17.25px"
+                        Background="#FFCC57"
+                        HorizontalAlignment="Left"/>
+            <TextBlock Text="GazLink" 
+                           Foreground="#F7F7F7"
+                           FontFamily="{StaticResource MontserratBlack}"
+                           FontSize="55.5px"/>
+        </StackPanel>
+    </Grid>
+</Page>

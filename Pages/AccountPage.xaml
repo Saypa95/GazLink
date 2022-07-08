@@ -1,0 +1,178 @@
+﻿<Page x:Class="GazLink.Pages.AccountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
+      xmlns:local="clr-namespace:GazLink.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="530" d:DesignWidth="700"
+      Title="AccountPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                        Orientation="Horizontal" Margin="20 5 0 0" Grid.Column="0">
+            <fa:ImageAwesome Icon="UserCircle" 
+                                 Foreground="#3B3B3B" 
+                                 VerticalAlignment="Center" 
+                                 Width="16"/>
+            <TextBlock Text="Мои данные" 
+                           FontFamily="{StaticResource MontserratMedium}" 
+                           Foreground="#3B3B3B" VerticalAlignment="Center" 
+                           FontSize="16" Margin="5 0"/>
+        </StackPanel>
+
+        <fa:ImageAwesome Icon="User" Grid.Column="1" 
+                         Grid.RowSpan="2"
+                         Width="150"
+                         Foreground="#3B3B3B"/>
+
+        <Grid Grid.Row="1"
+              Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="20,0,0,0"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0 0 0 10">
+                    <TextBlock Text="Фамилия: " 
+                           FontFamily="{StaticResource MontserratReg}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                    <TextBlock x:Name="tbLastName" 
+                           FontFamily="{StaticResource MontserratMedium}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0 0 0 10">
+                    <TextBlock Text="Имя: " 
+                           FontFamily="{StaticResource MontserratReg}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                    <TextBlock x:Name="tbFirstName" 
+                           FontFamily="{StaticResource MontserratMedium}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0 0 0 10">
+                    <TextBlock Text="Отчество: " 
+                           FontFamily="{StaticResource MontserratReg}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                    <TextBlock x:Name="tbMiddleName" 
+                           FontFamily="{StaticResource MontserratMedium}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="20,0,0,0"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0 0 0 10">
+                    <TextBlock Text="Логин: " 
+                           FontFamily="{StaticResource MontserratReg}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                    <TextBlock x:Name="tblLogin" 
+                           FontFamily="{StaticResource MontserratMedium}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0 0 0 10">
+                    <TextBlock Text="Пароль: " 
+                           FontFamily="{StaticResource MontserratReg}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                    <TextBlock x:Name="tblPassword" 
+                           FontFamily="{StaticResource MontserratMedium}" 
+                           Foreground="#3B3B3B"
+                           FontSize="16"/>
+                </StackPanel>
+            </StackPanel>
+
+            <GroupBox Grid.Row="1"
+                      Margin="20 0"
+                      Height="150"
+                      Header="Изменить логин/пароль:"
+                      VerticalAlignment="Top"
+                      Style="{StaticResource MaterialDesignGroupBox}"
+                      materialDesign:ColorZoneAssist.Mode="Custom"
+                      materialDesign:ColorZoneAssist.Background="#FFCC57"
+                      materialDesign:ColorZoneAssist.Foreground="#3B3B3B"
+                      FontFamily="{StaticResource MontserratMedium}" Grid.ColumnSpan="2">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Top">
+                        <TextBox materialDesign:HintAssist.Hint="Логин"
+                                 materialDesign:HintAssist.Foreground="#FFCC57"
+                                 FontFamily="{StaticResource MontserratReg}"
+                                 materialDesign:TextFieldAssist.UnderlineBrush="#FFCC57"
+                                 BorderBrush="#3B3B3B"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 Width="150"
+                                 Name="tbLogin"/>
+                        <TextBox materialDesign:HintAssist.Hint="Пароль"
+                                     materialDesign:HintAssist.Foreground="#FFCC57"
+                                     FontFamily="{StaticResource MontserratReg}"
+                                     materialDesign:TextFieldAssist.UnderlineBrush="#FFCC57"
+                                     BorderBrush="#3B3B3B"
+                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                     Margin="100 0 0 0"
+                                     Width="150"
+                                     Name="tbPassword"/>
+                    </StackPanel>
+                    <Button Background="#FFCC57"
+                            Foreground="#3B3B3B"
+                            Content="Сохранить"
+                            FontFamily="{StaticResource MontserratMedium}"
+                            Height="30"
+                            materialDesign:ButtonAssist.CornerRadius="5"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Margin="0 30 0 0"
+                            BorderBrush="{x:Null}"
+                            Name="btnSave" Click="btnSave_Click"/>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+
+    </Grid>
+</Page>
